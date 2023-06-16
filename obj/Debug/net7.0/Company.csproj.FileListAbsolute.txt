@@ -1,0 +1,17 @@
+/home/amplifiedge/Desktop/Company/bin/Debug/net7.0/Company
+/home/amplifiedge/Desktop/Company/bin/Debug/net7.0/Company.deps.json
+/home/amplifiedge/Desktop/Company/bin/Debug/net7.0/Company.runtimeconfig.json
+/home/amplifiedge/Desktop/Company/bin/Debug/net7.0/Company.dll
+/home/amplifiedge/Desktop/Company/bin/Debug/net7.0/Company.pdb
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.csproj.AssemblyReference.cache
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.GeneratedMSBuildEditorConfig.editorconfig
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.AssemblyInfoInputs.cache
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.AssemblyInfo.cs
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.csproj.CoreCompileInputs.cache
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.dll
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/refint/Company.dll
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.pdb
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.genruntimeconfig.cache
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/ref/Company.dll
+/home/amplifiedge/Desktop/Company/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll
+/home/amplifiedge/Desktop/Company/obj/Debug/net7.0/Company.csproj.CopyComplete
