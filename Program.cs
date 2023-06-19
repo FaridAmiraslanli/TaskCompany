@@ -11,10 +11,374 @@ namespace Company
             HRManager.AddDepartment("Security", 10000);
             HRManager.AddDepartment("HR", 10000);
             HRManager.AddDepartment("IT", 10000);
+            HRManager.AddEmployee("Shahin Valiyev", "Senior Developer", 10000, "IT");
+            HRManager.AddEmployee("Shahin Valiyev", "Senior Developer", 10000, "IT");
+            HRManager.AddEmployee("Shahin Valiyev", "Senior Developer", 10000, "IT");
+            HRManager.AddEmployee("Shahin Valiyev", "Senior Developer", 10000, "HR");
+            HRManager.AddEmployee("Shahin Valiyev", "Senior Developer", 10000, "Security");
 
-            foreach (Department item in HRManager.Departments)
+
+            //depatments list
+            ShowDepartmentsList();
+            CreateDepartment();
+            ModifyDepartment();
+            ListOfEmployees();
+            AddEmployee();
+            RemoveEmployee();
+            EditEmployee();
+            // Console.WriteLine("| Department | No.Employee | Avrg Salary |");
+            // foreach (Department department in HRManager.Departments)
+            // {
+            //     int _empCounter = 0;
+            //     int _salaryCounter = 0;
+            //     Console.Write($"{department.Name} | ");
+            //     foreach (Employee emp in HRManager.Employees)
+            //     {
+            //         if (emp.Department == department.Name)
+            //         {
+            //             _salaryCounter += emp.Salary;
+            //             _empCounter++;
+            //         }
+            //     }
+            //     _salaryCounter = _empCounter > 0 ? _salaryCounter / _empCounter : _salaryCounter;
+            //     Console.WriteLine($"{_empCounter} | {_salaryCounter}");
+            // }
+                    //create department
+                  
+                    // Console.WriteLine("Enter parameters for creating department:");
+                    // Console.Write("Name: ");
+                    // string nameOfDepartmentCreate = (Console.ReadLine() ?? "").ToUpper();
+                    // Console.Write("Salary limit: ");
+                    // int salaryLimit = int.Parse(Console.ReadLine() ?? "");
+                    // nameOfDepartmentCreate.ToUpper();
+                    // HRManager.AddDepartment(nameOfDepartmentCreate, salaryLimit);
+
+                    // modify department
+                   
+                    // string nameOfDepartmentModify = "";
+                    // bool modificationMatch = true;
+                    // while (modificationMatch)
+                    // {
+                    //     Console.Write("Enter department name for modification: ");
+                    //     nameOfDepartmentModify = (Console.ReadLine() ?? "").ToUpper();
+                    //     nameOfDepartmentModify.ToUpper();
+                    //     foreach (Department department in HRManager.Departments)
+                    //     {
+                    //         if (department.Name == nameOfDepartmentModify)
+                    //         {
+                    //             Console.WriteLine("| Name | Salary Limit |");
+                    //             Console.WriteLine($"| {department.Name} | {department.SalaryLimit}");
+                    //             modificationMatch = false;
+                    //         }
+                    //     }
+                    //     if (modificationMatch)
+                    //     {
+                    //         Console.WriteLine($"{nameOfDepartmentModify} does not exist.");
+                    //     }
+                    // }
+                    // if (!modificationMatch)
+                    // {
+                    //     Console.Write($"Enter new name to modify {nameOfDepartmentModify}: ");
+                    //     string newDepartmentName = (Console.ReadLine() ?? "").ToUpper();
+                    //     HRManager.EditDepartaments(nameOfDepartmentModify, newDepartmentName);
+                    // } 
+
+        //employees list
+        
+        // Console.WriteLine("| No | Fullname | Department | Salary |");
+        // foreach (Employee employee in HRManager.Employees)
+        // {
+        //     Console.WriteLine($"| {employee.No} | {employee.Fullname} | {employee.Department} | {employee.Salary} |");
+        // }
+
+        // bool departmentMatch = true;
+        // while (departmentMatch)
+        // {
+        //     Console.Write($"Enter department name: ");
+        //     string departmentName = (Console.ReadLine() ?? "").ToUpper();
+        //     foreach (Employee employee in HRManager.Employees)
+        //     {
+        //         if (employee.Department == departmentName)
+        //         {
+        //             Console.WriteLine($"| {employee.No} | {employee.Fullname} | {employee.Position} | {employee.Salary} |");
+        //             departmentMatch = false;
+        //         }
+        //     }
+        //     if (departmentMatch)
+        //     {
+        //         Console.WriteLine($"{departmentName} does not exist");
+        //     }
+        // }
+
+        //adding employee
+        
+        // head:
+        //     try
+        //     {
+        //             Console.WriteLine("Add new employee:");
+        //             Console.Write("Fullname: ");
+        //             string empFullname = Console.ReadLine() ?? "";
+        //             Console.Write("Position: ");
+        //             string empPosition = Console.ReadLine() ?? "";
+        //             Console.Write("Salary: ");
+        //             int empSalary = int.Parse(Console.ReadLine() ?? "");
+        //             Console.Write("Department: ");
+        //             string empDepartment = Console.ReadLine() ?? "";
+        //             HRManager.AddEmployee(empFullname, empPosition, empSalary, empDepartment);
+        //     }
+        //     catch(FormatException)
+        //     {
+        //         Console.WriteLine("Error... Enter salary as an integer number:");
+        //         goto head;
+        //     }
+        //     catch(Exception)
+        //     {
+        //         Console.WriteLine("Error... Enter existing department name:");
+        //         goto head;
+        //     }
+
+        //editing employees
+        
+        // bool empNoMatch = true;
+        
+        // while(empNoMatch)
+        // {
+        // Console.Write("Enter employee No to modify: ");
+        // string editEmployeeNo = (Console.ReadLine() ?? "").ToUpper();
+        // foreach (Employee employee in HRManager.Employees)
+        //         {
+        //             if (editEmployeeNo == employee.No)
+        //             {
+        //                 Console.WriteLine("| No | Fullname | Position | Salary |");
+        //                 Console.WriteLine($"| {employee.No} | {employee.Fullname} | {employee.Position} | {employee.Salary} |");
+        //             start:
+        //                 try
+        //                 {
+        //                     Console.Write("Enter new position: ");
+        //                     string newEmpPosition = Console.ReadLine() ?? "";
+        //                     Console.Write("Enter new salary: ");
+        //                     int newEmpSalary = int.Parse(Console.ReadLine() ?? "");
+        //                     HRManager.EditEmployee(employee.No, employee.No, employee.Fullname, newEmpSalary, newEmpPosition);
+        //                     empNoMatch = false;
+        //                 }
+        //                 catch (FormatException)
+        //                 {
+        //                     Console.WriteLine("Error... Enter salary as an integer number:");
+        //                     goto start;
+        //                 }
+        //             }
+        //         }
+        // }
+
+        //remove employee
+        // retry:
+        // try
+        // {
+        //         Console.WriteLine("Enter employee details for deletion.");
+        //         Console.Write("Fullname: ");
+        //         string empFullnameDeletion = (Console.ReadLine() ?? "");
+        //         Console.Write("Number: ");
+        //         string empNoDeletion = (Console.ReadLine() ?? "").ToUpper();
+
+        //         HRManager.RemoveEmployee(empNoDeletion, empFullnameDeletion);
+
+        //     Console.WriteLine("| No | Fullname | Department | Salary |");
+        //     foreach (Employee employee in HRManager.Employees)
+        //     {
+        //         Console.WriteLine($"| {employee.No} | {employee.Fullname} | {employee.Department} | {employee.Salary} |");
+        //     }
+        // }
+        // catch(Exception)
+        // {
+        //     Console.WriteLine("There is no existing employee... Try again.");
+        //     goto retry;
+        // }
+       
+        }
+
+        public static void ShowDepartmentsList()
+        {
+            //depatments list
+
+            Console.WriteLine("| Department | No.Employee | Avrg Salary |");
+            foreach (Department department in HRManager.Departments)
             {
-                System.Console.WriteLine(item.Name);
+                int _empCounter = 0;
+                int _salaryCounter = 0;
+                Console.Write($"{department.Name} | ");
+                foreach (Employee emp in HRManager.Employees)
+                {
+                    if (emp.Department == department.Name)
+                    {
+                        _salaryCounter += emp.Salary;
+                        _empCounter++;
+                    }
+                }
+                _salaryCounter = _empCounter > 0 ? _salaryCounter / _empCounter : _salaryCounter;
+                Console.WriteLine($"{_empCounter} | {_salaryCounter}");
+            }
+        }
+        public static void CreateDepartment()
+        {
+            //create department
+
+            Console.WriteLine("Enter parameters for creating department:");
+            Console.Write("Name: ");
+            string nameOfDepartmentCreate = (Console.ReadLine() ?? "").ToUpper();
+            Console.Write("Salary limit: ");
+            int salaryLimit = int.Parse(Console.ReadLine() ?? "");
+            nameOfDepartmentCreate.ToUpper();
+            HRManager.AddDepartment(nameOfDepartmentCreate, salaryLimit);
+        }
+
+        public static void ModifyDepartment()
+        {
+            //modify department
+            string nameOfDepartmentModify = "";
+            bool modificationMatch = true;
+            while (modificationMatch)
+            {
+                Console.Write("Enter department name for modification: ");
+                nameOfDepartmentModify = (Console.ReadLine() ?? "").ToUpper();
+                nameOfDepartmentModify.ToUpper();
+                foreach (Department department in HRManager.Departments)
+                {
+                    if (department.Name == nameOfDepartmentModify)
+                    {
+                        Console.WriteLine("| Name | Salary Limit |");
+                        Console.WriteLine($"| {department.Name} | {department.SalaryLimit}");
+                        modificationMatch = false;
+                    }
+                }
+                if (modificationMatch)
+                {
+                    Console.WriteLine($"{nameOfDepartmentModify} does not exist.");
+                }
+            }
+            if (!modificationMatch)
+            {
+                Console.Write($"Enter new name to modify {nameOfDepartmentModify}: ");
+                string newDepartmentName = (Console.ReadLine() ?? "").ToUpper();
+                HRManager.EditDepartaments(nameOfDepartmentModify, newDepartmentName);
+            } 
+        }
+        public static void ListOfEmployees()
+        {
+            //employees list
+            Console.WriteLine("| No | Fullname | Department | Salary |");
+            foreach (Employee employee in HRManager.Employees)
+            {
+                Console.WriteLine($"| {employee.No} | {employee.Fullname} | {employee.Department} | {employee.Salary} |");
+            }
+
+            bool departmentMatch = true;
+            while (departmentMatch)
+            {
+                Console.Write($"Enter department name: ");
+                string departmentName = (Console.ReadLine() ?? "").ToUpper();
+                foreach (Employee employee in HRManager.Employees)
+                {
+                    if (employee.Department == departmentName)
+                    {
+                        Console.WriteLine($"| {employee.No} | {employee.Fullname} | {employee.Position} | {employee.Salary} |");
+                        departmentMatch = false;
+                    }
+                }
+                if (departmentMatch)
+                {
+                    Console.WriteLine($"{departmentName} does not exist");
+                }
+            }
+        }
+        public static void AddEmployee()
+        {
+        //adding employee
+        head:
+            try
+            {
+                Console.WriteLine("Add new employee:");
+                Console.Write("Fullname: ");
+                string empFullname = Console.ReadLine() ?? "";
+                Console.Write("Position: ");
+                string empPosition = Console.ReadLine() ?? "";
+                Console.Write("Salary: ");
+                int empSalary = int.Parse(Console.ReadLine() ?? "");
+                Console.Write("Department: ");
+                string empDepartment = (Console.ReadLine() ?? "").ToUpper();
+                HRManager.AddEmployee(empFullname, empPosition, empSalary, empDepartment);
+                Console.WriteLine("Employee successfully added.");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error... Enter salary as an integer number:");
+                goto head;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error... Enter existing department name:");
+                goto head;
+            }
+        }
+        public static void EditEmployee()
+        {
+            //editing employees
+
+            bool empNoMatch = true;
+
+            while (empNoMatch)
+            {
+                Console.Write("Enter employee No to modify: ");
+                string editEmployeeNo = (Console.ReadLine() ?? "").ToUpper();
+                foreach (Employee employee in HRManager.Employees)
+                {
+                    if (editEmployeeNo == employee.No)
+                    {
+                        Console.WriteLine("| No | Fullname | Position | Salary |");
+                        Console.WriteLine($"| {employee.No} | {employee.Fullname} | {employee.Position} | {employee.Salary} |");
+                    start:
+                        try
+                        {
+                            Console.Write("Enter new position: ");
+                            string newEmpPosition = Console.ReadLine() ?? "";
+                            Console.Write("Enter new salary: ");
+                            int newEmpSalary = int.Parse(Console.ReadLine() ?? "");
+                            HRManager.EditEmployee(employee.No, employee.No, employee.Fullname, newEmpSalary, newEmpPosition);
+                            empNoMatch = false;
+                            Console.WriteLine("Employee successfully modified.");
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Error... Enter salary as an integer number:");
+                            goto start;
+                        }
+                    }
+                }
+            }
+        }
+        public static void RemoveEmployee()
+        {
+        //remove employee
+        retry:
+            try
+            {
+                Console.WriteLine("Enter employee details for deletion.");
+                Console.Write("Fullname: ");
+                string empFullnameDeletion = (Console.ReadLine() ?? "");
+                Console.Write("Number: ");
+                string empNoDeletion = (Console.ReadLine() ?? "").ToUpper();
+
+                HRManager.RemoveEmployee(empNoDeletion, empFullnameDeletion);
+
+                Console.WriteLine("| No | Fullname | Department | Salary |");
+                foreach (Employee employee in HRManager.Employees)
+                {
+                    Console.WriteLine($"| {employee.No} | {employee.Fullname} | {employee.Department} | {employee.Salary} |");
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("There is no existing employee... Try again.");
+                goto retry;
             }
         }
     }
@@ -59,6 +423,13 @@ Employee class:
 
 
  Proses:
+ ShowDepartmentsList();
+            CreateDepartment();
+            ModifyDepartment();
+            ListOfEmployees();
+            AddEmployee();
+            RemoveEmployee();
+            EditEmployee();
  
  Layihe run olduqda console penceresinde edile bilinecek emeliyyatlarin adlari gosterilmelidir:
 

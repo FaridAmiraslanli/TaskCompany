@@ -20,6 +20,7 @@ namespace Company
 
         public Employee(string fullname, string position, int salary, string department)
         {
+            department.ToUpper();
             Fullname = fullname;
             Position = position.Length >= 2 ? position : throw new Exception("Position must contain minimum 2 alphabet");
             Salary = salary >= 250 ? salary : 250;

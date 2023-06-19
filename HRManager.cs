@@ -8,10 +8,11 @@ namespace Company
 {
     public class HRManager
     {
-        public static ArrayList Departments = Department.DbDepartments;
-        public static ArrayList Employees = Employee.DbEmployee;
+        public static ArrayList Departments = new ArrayList()/*Department.DbDepartments*/;
+        public static ArrayList Employees = new ArrayList()/*Employee.DbEmployee*/;
         public static void AddDepartment(string name, int salaryLimit)
         {
+            name.ToUpper();
             Department newDepartment = new Department(name, salaryLimit);
             foreach (Department item in Departments)
             {
@@ -41,18 +42,22 @@ namespace Company
                 if (item.Name == departmentName)
                 {
                     item.Name = newDepartmentName;
+                    break;
                 }
             }
         }
         public static void RemoveEmployee(string employeeNo, string fullname)
         {
             bool _employeeNotFound = true;
-            foreach (Employee item in Employees)
+            foreach (Employee item in HRManager.Employees)
             {
                 if (item.No == employeeNo && item.Fullname == fullname)
                 {
+                    
                     Employees.Remove(item);
                     _employeeNotFound = false;
+                    Console.WriteLine($"{fullname} successfully removed");
+                    break;
                 }
             }
             if (_employeeNotFound)

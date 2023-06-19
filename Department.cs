@@ -34,6 +34,7 @@ namespace Company
         }
         public Department(string name, int salaryLimit)
         {
+            name.ToUpper();
             Name = name.Length >= 2 ? name : throw new Exception("Department name must contain minimum 2 alphabet");
             SalaryLimit = salaryLimit >= 250 ? salaryLimit : 250;
             _initialOfDepartment = new StringSegment(Name, 0, 2);
