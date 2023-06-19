@@ -1,3 +1,19 @@
-.bin
-.obj
-.vscode
+.vs/
+bin/
+obj/
+
+# NuGet packages
+/packages/
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Other files
+*.suo
+*.user
+*.log
+*.bak
+*.tmp
